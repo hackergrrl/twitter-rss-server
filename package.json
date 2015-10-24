@@ -2,7 +2,9 @@
   "name": "twitter-rss-server",
   "version": "0.2.0",
   "description": "tiny server that hosts Twitter timelines as RSS feeds",
-  "main": "index.js",
+  "bin": {
+    "twitter-rss-server": "bin/cmd.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +14,12 @@
   ],
   "author": "Stephen Whitmore <sww@eight45.net>",
   "license": "MIT",
+  "maintainers": [
+    {
+      "name": "Stephen Whitmore",
+      "email": "sww@eight45.net"
+    }
+  ],
   "dependencies": {
     "configstore": "^1.2.1",
     "prompt": "^0.2.14",
