@@ -2,6 +2,10 @@
 
 > Serve Twitter user timelines as RSS feeds.
 
+# WIP
+
+This doesn't actually work yet. Coming soon to a repo near you.
+
 
 # installation
 
