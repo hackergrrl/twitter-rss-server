@@ -22,6 +22,7 @@
   ],
   "dependencies": {
     "configstore": "^1.2.1",
+    "minimist": "^1.2.0",
     "prompt": "^0.2.14",
     "rss-twitter": "0.0.2"
   }
