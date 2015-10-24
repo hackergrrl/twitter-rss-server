@@ -13,6 +13,8 @@
   "author": "Stephen Whitmore <sww@eight45.net>",
   "license": "MIT",
   "dependencies": {
+    "configstore": "^1.2.1",
+    "prompt": "^0.2.14",
     "rss-twitter": "0.0.2"
   }
 }
