@@ -2,10 +2,6 @@
 
 > Serve Twitter user timelines as RSS feeds.
 
-# WIP
-
-This doesn't actually work yet. Coming soon to a repo near you.
-
 
 # installation
 
@@ -22,7 +18,7 @@ Secret. Oy vey.
 
 On your first run of `twitter-rss-server` you'll be asked for these values:
 they'll be written as a JSON blob in your system's configuration directory
-(`~/.config/twitter-rss-server` on \*nixes).
+(`~/.config/configstore/twitter-rss-server` on \*nixes).
 
 
 # usage
