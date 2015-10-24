@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 var http = require('http')
+var path = require('path')
 var prompt = require('prompt')
 var rssTwitter = require('rss-twitter')
 var configstore = require('configstore')
@@ -13,7 +14,6 @@ port = argv['p'] || argv['port'] || 6000
 
 var conf = new configstore('twitter-rss-server')
 
-promptForKeys(startServer)
 
 function startServer () {
   var twitterApi = rssTwitter(conf.get('CONSUMER_KEY'), conf.get('CONSUMER_SECRET'), conf.get('ACCESS_TOKEN'), conf.get('ACCESS_SECRET'))
@@ -61,3 +61,13 @@ function promptForKeys (cb) {
     }
   })
 }
+
+
+// Rewrite the path to use the global .config namespace.
+conf.path = conf.path.replace(
+    path.join('configstore', 'twitter-rss-server.json'),
+    'twitter-rss-server/config.json')
+
+
+// Prompt the user for keys if necessary, then start the server.
+promptForKeys(startServer)

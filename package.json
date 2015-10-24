@@ -28,6 +28,6 @@
       "TODO(noffle): use mainline 'twitter-rss' once fixing PR is pulled in",
       "(https://github.com/drei01/node-twitter-rss/pull/1)"
     ],
-    "twitter-rss": "https://github.com/noffle/node-twitter-rss"
+    "rss-twitter": "https://github.com/noffle/node-twitter-rss"
   }
 }
