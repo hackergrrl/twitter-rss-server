@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var http = require('http')
 var prompt = require('prompt')
 var rssTwitter = require('rss-twitter')
