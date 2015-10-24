@@ -1,0 +1,18 @@
+{
+  "name": "twitter-rss-server",
+  "version": "1.0.0",
+  "description": "tiny server that hosts Twitter timelines as RSS feeds",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rss",
+    "twitter"
+  ],
+  "author": "Stephen Whitmore <sww@eight45.net>",
+  "license": "MIT",
+  "dependencies": {
+    "rss-twitter": "0.0.2"
+  }
+}
