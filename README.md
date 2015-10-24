@@ -24,7 +24,7 @@ they'll be written as a JSON blob in your system's configuration directory
 # usage
 
 Use the `twitter-rss-server` command to run. It defaults to port 6000 on your
-local machine.
+local machine, but you can use `-p` or `--port` to set it to something else.
 
 ```
 $ twitter-rss-server
