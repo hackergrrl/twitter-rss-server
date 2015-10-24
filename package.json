@@ -24,6 +24,10 @@
     "configstore": "^1.2.1",
     "minimist": "^1.2.0",
     "prompt": "^0.2.14",
-    "rss-twitter": "0.0.2"
+    "//": [
+      "TODO(noffle): use mainline 'twitter-rss' once fixing PR is pulled in",
+      "(https://github.com/drei01/node-twitter-rss/pull/1)"
+    ],
+    "twitter-rss": "https://github.com/noffle/node-twitter-rss"
   }
 }
