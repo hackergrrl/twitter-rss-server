@@ -1,6 +1,6 @@
 {
   "name": "twitter-rss-server",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "description": "tiny server that hosts Twitter timelines as RSS feeds",
   "bin": {
     "twitter-rss-server": "bin/cmd.js"
