@@ -22,6 +22,6 @@
   ],
   "dependencies": {
     "minimist": "^1.2.0",
-    "twitter-rss-noauth": "^0.2.0"
+    "twitter-rss-noauth": "^0.2.1"
   }
 }
