@@ -2,72 +2,26 @@
 
 var http = require('http')
 var path = require('path')
-var prompt = require('prompt')
-var rssTwitter = require('rss-twitter')
-var configstore = require('configstore')
+var rssTwitter = require('twitter-rss-noauth')
 
 
 var port = 6000
 var argv = require('minimist')(process.argv.slice(2));
 port = argv['p'] || argv['port'] || 6000
 
+var server = http.createServer(function (req, res) {
+  var user = req.url.substring(1)
 
-var conf = new configstore('twitter-rss-server')
-
-
-function startServer () {
-  var twitterApi = rssTwitter(conf.get('CONSUMER_KEY'), conf.get('CONSUMER_SECRET'), conf.get('ACCESS_TOKEN'), conf.get('ACCESS_SECRET'))
-
-  var server = http.createServer(function (req, res) {
-    var user = req.url.substring(1)
-
-    twitterApi.feed(user, function (err, feed) {
-      if (err) {
-        res.end(err)
-      } else {
-        res.end(feed.render('rss-2.0'))
-      }
-    })
-  })
-
-  server.listen(port, function () {
-    console.log('http://localhost:' + port)
-  })
-}
-
-function promptForKeys (cb) {
-  var fields = [
-    'CONSUMER_KEY',
-    'CONSUMER_SECRET',
-    'ACCESS_TOKEN',
-    'ACCESS_SECRET',
-  ]
-  var missingFields = fields.filter(function (f) { return !conf.get(f) })
-  if (!missingFields.length) {
-    cb()
-    return
-  }
-
-  prompt.start()
-
-  prompt.get(missingFields, function (err, res) {
+  rssTwitter(user, function (err, feed) {
     if (err) {
-      return process.exit(err)
+      res.end(err)
     } else {
-      Object.keys(res).forEach(function (k) {
-        conf.set(k, res[k])
-      })
-      cb()
+      res.end(feed)
     }
   })
-}
+})
 
+server.listen(port, function () {
+  console.log('http://localhost:' + port)
+})
 
-// Rewrite the path to use the global .config namespace.
-conf.path = conf.path.replace(
-    path.join('configstore', 'twitter-rss-server.json'),
-    'twitter-rss-server/config.json')
-
-
-// Prompt the user for keys if necessary, then start the server.
-promptForKeys(startServer)

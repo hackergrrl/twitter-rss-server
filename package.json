@@ -21,13 +21,7 @@
     }
   ],
   "dependencies": {
-    "configstore": "^1.2.1",
     "minimist": "^1.2.0",
-    "prompt": "^0.2.14",
-    "//": [
-      "TODO(noffle): use mainline 'twitter-rss' once fixing PR is pulled in",
-      "(https://github.com/drei01/node-twitter-rss/pull/1)"
-    ],
-    "rss-twitter": "https://github.com/noffle/node-twitter-rss"
+    "twitter-rss-noauth": "^0.1.1"
   }
 }
