@@ -9,17 +9,6 @@
 $ npm install -g twitter-rss-server
 ```
 
-# setup
-
-Twitter has chosen to put up barriers around their API, so you'll need to
-[Create a Twitter App](https://apps.twitter.com/) to get a Consumer Key,
-Consumer Secret Key, an Access Token, and an Access Token Secret. Oy vey.
-
-Once you have these, you'll be asked for them on your first run of
-`twitter-rss-server`. They'll be written as a JSON blob in your system's
-configuration directory (`~/.config/configstore/twitter-rss-server` on \*nixes).
-
-
 # usage
 
 Use the `twitter-rss-server` command to run. It defaults to port 6000 on your
