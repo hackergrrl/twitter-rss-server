@@ -14,7 +14,7 @@ var server = http.createServer(function (req, res) {
 
   rssTwitter(user, function (err, feed) {
     if (err) {
-      res.end(err)
+      res.end(err.toString())
     } else {
       res.end(feed)
     }
